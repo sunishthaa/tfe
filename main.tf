@@ -1,10 +1,8 @@
 terraform {
-  backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "Sunishthaa_org"
-    workspaces { 
-      prefix = "aws-" 
-    } 
+  backend "s3" {
+    bucket = "mybackendtest"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
   }
 }
 
