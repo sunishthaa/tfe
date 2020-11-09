@@ -21,3 +21,9 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+
+output "address" {
+  value       = "myaddresss"
+  description = "testing address output variable"
+}
